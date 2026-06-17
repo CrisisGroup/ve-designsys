@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visual Explainer Design System</title>
+  <meta name="description" content="Review page for Crisis Group visual explainer layout permutations." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="system-header">
+    <div class="system-header__inner">
+      <p class="kicker">Visual Explainer Design System</p>
+      <h1>Midlevel Scrollytelling Patterns</h1>
+      <p class="lede">
+        A non-technical review board for the layout, media and interaction patterns used in the Hormuz-style visual
+        explainer format. Dummy media blocks show expected crop, ratio and production scope.
+      </p>
+    </div>
+  </header>
+
+  <nav class="system-nav" aria-label="Design system sections">
+    <a href="#tokens">Tokens</a>
+    <a href="#hero">Hero</a>
+    <a href="#copy">Copy</a>
+    <a href="#figures">Figures</a>
+    <a href="#scroll-swaps">Scroll Swaps</a>
+    <a href="#comparison">Comparison</a>
+    <a href="#interactive">Interactive</a>
+  </nav>
+
+  <main>
+    <section class="review-section" id="tokens">
+      <div class="section-heading">
+        <p class="kicker">Foundation</p>
+        <h2>Global Tokens</h2>
+        <p>Shared decisions that should remain stable across article builds unless a client-specific art direction
+          requires a deliberate departure.</p>
+      </div>
+
+      <div class="token-grid">
+        <article class="token-card">
+          <h3>Type Scale</h3>
+          <p class="sample-display">Chapter Headline</p>
+          <p class="sample-serif">Narrative body copy carries the report voice, with generous line height for long-form
+            reading.</p>
+        </article>
+        <article class="token-card">
+          <h3>Palette</h3>
+          <div class="swatches" aria-label="Color swatches">
+            <span class="swatch swatch--paper">Paper</span>
+            <span class="swatch swatch--ink">Ink</span>
+            <span class="swatch swatch--clay">Clay</span>
+            <span class="swatch swatch--teal">Teal</span>
+            <span class="swatch swatch--gold">Gold</span>
+          </div>
+        </article>
+        <article class="token-card">
+          <h3>Inline Data Highlights</h3>
+          <p class="sample-serif">Use <span class="highlight highlight--dark">dark</span>, <span
+              class="highlight highlight--teal">teal</span> and <span class="highlight highlight--gold">gold</span>
+            callouts sparingly inside paragraphs.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="pattern" id="hero">
+      <div class="pattern__meta">
+        <p class="kicker">01 / Opening</p>
+        <h2>Fullscreen Cinematic Hero</h2>
+        <p>Use for the first viewport. Requires a wide crop, title-safe negative space and a social-image companion.</p>
+        <dl>
+          <div>
+            <dt>Media</dt>
+            <dd>21:9 desktop, 16:9 mobile</dd>
+          </div>
+          <div>
+            <dt>Scope</dt>
+            <dd>1 hero image, 1 social image</dd>
+          </div>
+        </dl>
+      </div>
+
+      <article class="hero-demo">
+        <div class="dummy-media dummy-media--hero" role="img" aria-label="Dummy hero image, 21 by 9 crop">
+          <span>Hero Image<br />21:9 desktop crop</span>
+        </div>
+        <div class="hero-demo__text">
+          <h3>The State of the System: A Sample Explainer Title</h3>
+          <p>Short italic deck summarizes the stakes while the intro copy begins below the fold.</p>
+          <hr />
+          <p class="byline">by the <strong>INTERNATIONAL CRISIS GROUP</strong></p>
+          <p class="date">Published 17 June, 2026</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="pattern" id="copy">
+      <div class="pattern__meta">
+        <p class="kicker">02 / Reading</p>
+        <h2>Article Copy Stack</h2>
+        <p>Default long-form rhythm for narrative text, links, bullets and subheads.</p>
+        <dl>
+          <div>
+            <dt>Width</dt>
+            <dd>720px max copy column</dd>
+          </div>
+          <div>
+            <dt>Spacing</dt>
+            <dd>3rem section bottom, 1.5rem gutters</dd>
+          </div>
+        </dl>
+      </div>
+
+      <article class="chapter-copy">
+        <h3>More Than One Story Layer</h3>
+        <p>The format works best when each chapter combines a concise analytical point with one visual job. A
+          paragraph can include a <a href="#">source link</a> and a small inline emphasis treatment without becoming a
+          graphic.</p>
+        <p>When a section introduces multiple constraints, bullets keep the reading path stable:</p>
+        <ul class="chapter-list">
+          <li>One idea per bullet, written as editorial copy rather than interface instructions.</li>
+          <li>Bullets should not become a replacement for the visual sequence.</li>
+          <li>Use this pattern when the client needs detail but not a new asset.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="pattern" id="figures">
+      <div class="pattern__meta">
+        <p class="kicker">03 / Static Media</p>
+        <h2>Wide Figure Permutations</h2>
+        <p>Static figures are cheaper than scroll swaps and should be the default when the audience only needs one
+          state.</p>
+        <dl>
+          <div>
+            <dt>Variants</dt>
+            <dd>Contained, wide, full-width</dd>
+          </div>
+          <div>
+            <dt>Scope</dt>
+            <dd>1 final exported image per figure</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="figure-stack">
+        <figure class="media-figure media-figure--contained">
+          <div class="dummy-media dummy-media--map" role="img" aria-label="Dummy contained map, 4 by 3 ratio">
+            <span>Contained Map<br />4:3, max 720px</span>
+          </div>
+          <figcaption>Contained figures align with the reading column when the visual detail is moderate.</figcaption>
+        </figure>
+
+        <figure class="media-figure media-figure--wide">
+          <div class="dummy-media dummy-media--chart" role="img" aria-label="Dummy wide chart, 2 by 1 ratio">
+            <span>Wide Chart<br />2:1, max 1200px</span>
+          </div>
+          <figcaption>Wide figures create a pause in the article and support dense labels or multi-region maps.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="pattern" id="scroll-swaps">
+      <div class="pattern__meta">
+        <p class="kicker">04 / Sticky Media</p>
+        <h2>Scroll-Swap Sequences</h2>
+        <p>Use when the reader needs to compare states in place. Each specimen below uses dummy frames, explicit step
+          counts and the same progressive swap behavior as the production pattern.</p>
+        <dl>
+          <div>
+            <dt>Performance</dt>
+            <dd>Lazy dummy frames, reduced-motion support</dd>
+          </div>
+          <div>
+            <dt>Controls</dt>
+            <dd>Step count, aspect ratio, fade duration, final hold</dd>
+          </div>
+        </dl>
+      </div>
+
+      <article class="scroll-swap pattern-demo" data-scroll-swap data-swap-index="0" data-swap-final-hold="0.45">
+        <div class="scroll-swap__stage">
+          <figure class="media-figure media-figure--swap">
+            <div class="dummy-media dummy-media--square scroll-swap__frame" role="img" data-frame-title="Three-Step Map"
+              aria-label="Dummy three-step square map">
+              <span class="scroll-swap__label">Three-Step Map<br />Frame 1 of 3</span>
+            </div>
+          </figure>
+          <div class="scroll-swap__copy">
+            <h3>Three-Step Contained Swap</h3>
+            <p>Best for intro maps, before-during-after geography, or compact data states. The final frame holds longer
+              so the reader can inspect the destination state.</p>
+          </div>
+        </div>
+        <div class="scroll-swap__track scroll-swap__track--three" data-labels="Frame 1 of 3|Frame 2 of 3|Frame 3 of 3"
+          aria-hidden="true"></div>
+      </article>
+
+      <article class="scroll-swap scroll-swap--wide pattern-demo" data-scroll-swap data-swap-index="0"
+        data-swap-fade-ms="180">
+        <div class="scroll-swap__stage">
+          <figure class="media-figure media-figure--swap">
+            <div class="dummy-media dummy-media--wide scroll-swap__frame" role="img" data-frame-title="Fast Two-Step"
+              aria-label="Dummy two-step panoramic graphic">
+              <span class="scroll-swap__label">Fast Two-Step<br />Before</span>
+            </div>
+          </figure>
+          <div class="scroll-swap__copy">
+            <h3>Fast Panoramic Swap</h3>
+            <p>Use when the image is wide and the state change should feel immediate, such as route closures, port
+              access, or a single annotated overlay.</p>
+          </div>
+        </div>
+        <div class="scroll-swap__track" data-labels="Before|After" aria-hidden="true"></div>
+      </article>
+
+      <article class="scroll-swap scroll-swap--xl pattern-demo" data-scroll-swap data-swap-index="0"
+        data-swap-final-hold="0.35">
+        <div class="scroll-swap__stage">
+          <figure class="media-figure media-figure--swap">
+            <div class="dummy-media dummy-media--landscape scroll-swap__frame" role="img"
+              data-frame-title="Five-Step Sequence"
+              aria-label="Dummy five-step landscape sequence">
+              <span class="scroll-swap__label">Five-Step Sequence<br />Frame 1 of 5</span>
+            </div>
+          </figure>
+          <div class="scroll-swap__copy">
+            <h3>Extended Sequence</h3>
+            <p>Reserve for complex processes where each frame adds a meaningful layer. Five steps is a higher-scope
+              asset request and should be approved early.</p>
+          </div>
+        </div>
+        <div class="scroll-swap__track scroll-swap__track--five"
+          data-labels="Frame 1 of 5|Frame 2 of 5|Frame 3 of 5|Frame 4 of 5|Frame 5 of 5" aria-hidden="true"></div>
+      </article>
+    </section>
+
+    <section class="pattern" id="comparison">
+      <div class="pattern__meta">
+        <p class="kicker">05 / Comparison</p>
+        <h2>Split and Three-Up Media</h2>
+        <p>Use when the key question is side-by-side comparison rather than scroll progression.</p>
+        <dl>
+          <div>
+            <dt>Variants</dt>
+            <dd>Two-up, two-plus-one, labelled detail</dd>
+          </div>
+          <div>
+            <dt>Scope</dt>
+            <dd>2-3 related images, consistent crop</dd>
+          </div>
+        </dl>
+      </div>
+
+      <figure class="comparison-grid">
+        <div class="comparison-grid__top">
+          <div class="dummy-media dummy-media--photo" role="img" aria-label="Dummy before image">
+            <span>Before<br />16:10</span>
+          </div>
+          <div class="dummy-media dummy-media--photo is-after" role="img" aria-label="Dummy after image">
+            <span>After<br />16:10</span>
+          </div>
+        </div>
+        <div class="dummy-media dummy-media--wide is-detail" role="img" aria-label="Dummy annotated detail image">
+          <span>Annotated Detail<br />Full-width supporting crop</span>
+        </div>
+        <figcaption>Three-up comparison supports a before/after pair plus one explanatory detail image.</figcaption>
+      </figure>
+    </section>
+
+    <section class="pattern" id="interactive">
+      <div class="pattern__meta">
+        <p class="kicker">06 / Embedded Tool</p>
+        <h2>Interactive Map Frame</h2>
+        <p>A contained frame for a Mapbox or data tool. The design-system sample shows the bounding box, loading state
+          and expected control placement without requiring a live map token.</p>
+        <dl>
+          <div>
+            <dt>Media</dt>
+            <dd>16:9 frame, minimum 420px height</dd>
+          </div>
+          <div>
+            <dt>Scope</dt>
+            <dd>Separate sub-app with data, controls and fallback copy</dd>
+          </div>
+        </dl>
+      </div>
+
+      <article class="map-frame">
+        <div class="dummy-map" role="img" aria-label="Dummy interactive map frame">
+          <div class="dummy-map__controls">
+            <button type="button">Route A</button>
+            <button type="button">Route B</button>
+            <button type="button">Reset</button>
+          </div>
+          <span>Interactive Map Embed<br />16:9 with controls</span>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="system-footer">
+    <p>Design-system sample for review and scoping. All media blocks are dummy placeholders.</p>
+  </footer>
+
+  <script src="scroll-swap.js"></script>
+</body>
+
+</html>
