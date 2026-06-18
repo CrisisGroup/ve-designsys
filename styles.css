@@ -130,6 +130,16 @@ button {
   line-height: 1.45;
 }
 
+.version-note {
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-family: var(--font-sans-cond);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .kicker {
   margin-bottom: 0.7rem;
   color: var(--clay);
